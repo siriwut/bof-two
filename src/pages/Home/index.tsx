@@ -31,9 +31,6 @@ export default function Home() {
           <Breadcrumb.Item>Home</Breadcrumb.Item>
         </Breadcrumb>
         <Form layout="vertical" {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
-          <Form.Item name={['user', 'username']} label="Username" rules={[{ required: true }]}>
-            <Input />
-          </Form.Item>
           <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email', required: true  }]}>
             <Input />
           </Form.Item>

@@ -1,13 +1,18 @@
 import React from 'react';
 import Home from './pages/Home'
-import Profile from './pages/Profile'
+import Register from './pages/Register'
+import Products from './pages/Product'
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom'
 import { Layout, Menu } from 'antd'
 const { Header, Content, Footer,  } = Layout
 
 function App() {
-  const menuItems = [{ id: '1', text: 'Home', url: '/' }, { id: '2', text: 'Profile', url: '/profile' }]
+  const menuItems = [
+      { id: '1', text: 'Home', url: '/' },
+      { id: '2', text: 'Register', url: '/register' },
+      { id: '3', text: 'Product', url: '/products' }
+  ]
 
   return (
     <div className="App">
@@ -23,10 +28,11 @@ function App() {
         <Content style={{ padding: '0 50px' }}>
          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/products" element={<Products />} />
           </Routes>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+        <Footer style={{ textAlign: 'center' }}>Tape ©2018</Footer>
       </Layout>
     </div>
   );
